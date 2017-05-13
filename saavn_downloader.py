@@ -32,7 +32,7 @@ json_decoder = JSONDecoder()
 des_cipher = des(b"38346591", ECB, b"\0\0\0\0\0\0\0\0" , pad=None, padmode=PAD_PKCS5)
 
 
-input_url = input('Enter the song url:').strip()
+input_url = raw_input('Enter the song url:').strip()
 
 try:
     res = requests.get(input_url, proxies=proxies, headers=headers)
